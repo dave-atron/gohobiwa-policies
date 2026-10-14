@@ -1,0 +1,24 @@
+:root{--void:#0c0a14;--panel:#15121f;--cyan:#5ec8d8;--mag:#db62c0;--text:#e8e4f4;--dim:#9d97b5;color-scheme:dark}
+*{box-sizing:border-box}
+html{background:var(--void)}
+body{margin:0;color:var(--text);font:400 19px/1.6 Rajdhani,"Segoe UI",system-ui,sans-serif;min-height:100vh;
+background:linear-gradient(rgba(94,200,216,.05) 1px,transparent 1px) 0 0/48px 48px,linear-gradient(90deg,rgba(94,200,216,.05) 1px,transparent 1px) 0 0/48px 48px,radial-gradient(ellipse at 20% -10%,rgba(219,98,192,.18),transparent 55%),var(--void)}
+.wrap{max-width:760px;margin:0 auto;padding:32px 20px 64px}
+nav{display:flex;gap:22px;font:15px "Share Tech Mono",ui-monospace,Consolas,monospace;margin-bottom:28px}
+nav a{color:var(--dim);text-decoration:none;padding:4px 0;border-bottom:1px solid transparent}
+nav a:hover,nav a[aria-current]{color:var(--cyan);border-color:var(--cyan)}
+a{color:var(--cyan)}
+a:focus-visible{outline:2px solid var(--mag);outline-offset:3px}
+main{position:relative;background:var(--panel);border:1px solid rgba(94,200,216,.35);border-left:4px solid var(--cyan);padding:36px clamp(20px,5vw,44px) 40px;clip-path:polygon(0 0,calc(100% - 28px) 0,100% 28px,100% 100%,0 100%);overflow:hidden}
+main::after{content:"";position:absolute;top:0;right:0;width:28px;height:28px;background:linear-gradient(to bottom left,transparent 50%,var(--mag) 50%)}
+main::before{content:"";position:absolute;left:0;right:0;top:0;height:2px;background:linear-gradient(90deg,transparent,var(--cyan),transparent);box-shadow:0 0 14px var(--cyan);animation:scan 1.4s ease-out both}
+@keyframes scan{from{top:0;opacity:1}to{top:100%;opacity:0}}
+@media (prefers-reduced-motion:reduce){main::before{display:none}}
+h1{font:400 clamp(2.1rem,7vw,3rem)/1.1 "Share Tech Mono",ui-monospace,Consolas,monospace;color:var(--cyan);text-shadow:3px 3px 0 rgba(219,98,192,.55),0 0 22px rgba(94,200,216,.4);margin:0 0 12px}
+h1.hero{font-size:clamp(2.8rem,11vw,4.6rem)}
+h2{font:400 1.2rem "Share Tech Mono",ui-monospace,Consolas,monospace;color:var(--mag);margin:34px 0 8px}
+p,li{max-width:66ch}
+li{margin:4px 0}
+.lead{font-size:1.45rem;line-height:1.35}
+.meta,footer{color:var(--dim);font:14px "Share Tech Mono",ui-monospace,Consolas,monospace}
+footer{margin-top:22px}
